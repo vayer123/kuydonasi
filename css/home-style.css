@@ -1,0 +1,461 @@
+/* Mulai code Anda dari baris terakhir */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lucida Grande";
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+    clear: left;
+}
+
+.top-container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.top-wrapper {
+    padding: 180px 0 100px 0;
+    background-image: url("../img/cover2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    text-align: center;
+    filter: brightness(80%);
+    padding-bottom: 200px;
+    opacity: 0.7;
+    position: relative;
+}
+
+.top-wrapper h1 {
+    font-size: 45px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.top-wrapper p {
+    margin-bottom: 3px;
+}
+
+
+/* test */
+
+.button-hover {
+    position: relative;
+    min-width: 230px;
+    margin: 3em;
+    padding: 0.3em;
+    background: radial-gradient(at 50% 100%, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+    background-blend-mode: screen, overlay;
+    border: 0;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.button-hover::before,
+.button-hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: radial-gradient(at 50% 100%, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+    background-blend-mode: screen, overlay;
+    background-blend-mode: screen;
+    border-radius: 80px;
+    transition: all .5s ease-in-out;
+}
+
+.button-hover:hover::before {
+    filter: blur(5px);
+}
+
+.button-hover:hover::after {
+    filter: blur(15px);
+}
+
+.button-hover:hover {
+    animation: hue 3s linear infinite;
+}
+
+@keyframes hue {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.button-hover span {
+    position: relative;
+    z-index: 3;
+    display: block;
+    padding: 1.3em;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    background: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    border-radius: 17px;
+}
+
+.btn-wrapper {
+    margin-top: 20px;
+}
+
+/*NAVBAR*/
+
+.toptop{
+  position: relative;
+}
+.topnav {
+
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top:0;
+}
+
+
+.topnav #myLinks {
+  display: none;
+  opacity: 0.8;
+}
+
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 19px;
+  display: block;
+}
+
+
+.topnav a.icon {
+  color:#55acee;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+
+.topnav a:hover {
+  background-color: #e2ebf0;
+  color: #55acee;
+  font-weight: bold;
+}
+
+.active {
+  background-color:#f0f0f0;
+  color: white;
+}
+
+.nav-logo {
+  height: 30px;
+  margin-left: 50px;
+}
+
+  /* Services */
+
+.Main{
+    width: 90%;
+    margin: 50px auto;
+}
+.heading h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.heading p{
+    text-align: center;
+    padding: 0 50px;
+    font-size: 15px;
+    font-weight: 200;
+    margin-bottom: 50px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+.card{
+    width: 25%;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-bottom:50px;
+    transition: 0.3s;
+}
+.card-header{
+    text-align: center;
+    padding: 50px 10px;
+    background: linear-gradient(to right, #1995a7, #2dc1d7);
+    color:#fff
+}
+.card-header h3{
+    padding: 20px;
+    font: Fredoka One;
+}
+.card-header img{
+    width: 150px;
+    height: 150px;
+}
+.card-body {
+    padding: 30px 20px;
+    text-align: justify;
+    font-size: 18px;
+    background: #fefefe;
+}
+.card-btn{
+    display: block;
+    color:#fff;
+    text-align:center;
+    background: linear-gradient(to right, #1995a7, #2dc1d7);
+    margin-top: 20%;
+    text-decoration: none;
+    padding: 15px;
+    margin-bottom: 20%;
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0,0,0,0.25);
+}
+
+/* Member */
+
+.member-wrapper {
+  padding-bottom: 80px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.member-container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.member-heading {
+  padding-top: 10px;
+  padding-bottom: 50px;
+  color: #5f5d60;
+}
+
+.member-heading h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #1995A7;
+  border-bottom: 1px solid #000;
+  opacity: 0.8;
+  text-transform: uppercase;
+  padding-top: 40px;
+  letter-spacing: 5px;
+}
+
+.member-heading h3 {
+  font-size: 20px;
+  font-weight: normal;
+  color: black;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+.team-member {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 13px;
+  transition: 0.5s;
+  background: #1995A7;
+  float: left;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.team-member:hover {
+  height: 300px;
+}
+
+.team-member .icon-member {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+}
+
+.team-member .icon-member img {
+  max-width: 100%;
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+.team-member:hover .icon-member img {
+  opacity: 1;
+}
+
+.team-member .content-member {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 90px;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.team-member:hover .content-member {
+  opacity: 1;
+}
+
+.team-member .content-member h3 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.team-member .content-member h3 span {
+  font-size: 12px;
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Footer */
+
+footer {
+  font-family: "Lucida Grande" ;
+  background-color: #1995A7;
+  color: black;
+  padding-top: 70px;
+  padding-bottom: 40px ;
+  margin-top: 10px;
+  text-align: center;
+  border-top: 2px solid #eee;
+}
+
+.footer-container{
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.logo-sosmed {
+ margin: 20px 0;
+
+ }
+
+.signup {
+  background-color: #239b76;
+}
+
+.facebook {
+  background-color: #3b5998;
+
+}
+
+.twitter {
+  background-color: #55acee;
+}
+
+.instagram {
+  background-color: #e4405f;
+}
+
+.whatsapp {
+  background-color: #25D366 ;
+}
+
+.footer-btn {
+  padding: 12px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius:50px;
+  text-align: center;
+}
+
+.footer-btn:hover , .footer-btn:focus , .footer-btn:active {
+-webkit-transform: scale(0.8);
+transform: scale(0.8);
+-webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+/*background-color:#28CADA;*/
+    opacity: 1;
+
+}
+
+.fa {
+padding-right: 5px;
+ }
+
+footer h3 {
+  font-size: 36px;
+  font-weight: 400;
+  padding-bottom: 30px;
+  color: #ffffff;
+}
+
+footer p {
+  padding-top: 50px;
+  opacity: 0.7;
+}
+
+span {
+  text-transform: uppercase;
+  padding-left: 5px;
+  color: #f0f0f0;
+  font-weight: 500;
+ }
